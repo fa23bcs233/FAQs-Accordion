@@ -7,16 +7,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <title>Frontend Mentor | FAQ accordion</title>
   <meta name="description" content="Frequently Asked Questions related to the Frontend Mentors">
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 
 <body>
@@ -29,7 +21,7 @@
 
       <div class="faqs-container">
         <div class="faq">
-          <details aria-expanded="true"  name="frontend-mentors-faqs" open> 
+          <details aria-expanded="true"  name="frontend-mentors-faqs" open = "true"> 
             <summary>What is Frontend Mentor, and how will it help me?</summary>
             <div class="details">
               Frontend Mentor offers realistic coding challenges to help developers improve their
@@ -38,7 +30,7 @@
             </div>
           </details>
         </div>
-        <div class="faq" aria-expanded="false" name="frontend-mentors-faqs" >
+        <div class="faq" aria-expanded="false" name="frontend-mentors-faqs" open = "false" >
           <details>
             <summary>Is Frontend Mentor free?</summary>
             <div class="details">
@@ -47,7 +39,7 @@
             </div>
           </details>
         </div>
-        <div class="faq" aria-expanded="false" name="frontend-mentors-faqs" >
+        <div class="faq" aria-expanded="false" name="frontend-mentors-faqs" open = "false" >
           <details>
             <summary>Can I use Frontend Mentor projects in my portfolio?</summary>
             <div class="details">
@@ -56,7 +48,7 @@
             </div>
           </details>
         </div>
-        <div class="faq" aria-expanded="false" name="frontend-mentors-faqs" >
+        <div class="faq" aria-expanded="false" name="frontend-mentors-faqs" open = "false" >
           <details>
             <summary>How can I get help if I'm stuck on a Frontend Mentor challenge?</summary>
             <div class="details">

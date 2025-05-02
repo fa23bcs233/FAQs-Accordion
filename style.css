@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: hsl(0, 100%, 100%);
+    --purple-100: hsl(275, 100%, 97%);
+    --purple-600: hsl(292, 16%, 49%);
+    --purple-950: hsl(292, 42%, 14%);
+}
+
+@font-face {
+    font-family: "workSans";
+    src: url(./assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: var(--purple-100);
+    font-family: "workSans";
+}
+
+main {
+    width: 100%;
+    min-height: calc(100vh - 20px);
+    padding-top: 40vw;
+    background-image: url(./assets/images/background-pattern-mobile.svg);
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.FAQs-section {
+    background-color: var(--white);
+    width: clamp(360px, 85%, 600px);
+    margin: auto;
+    padding: 24px;
+    border-radius: 10px;
+}
+
+.heading-container {
+    margin-bottom: 12px;
+}
+
+.heading-container h1 {
+    display: flex;
+}
+
+.heading-container h1 abbr {
+    text-decoration: none;
+    font-size: 36px;
+    color: var(--purple-950);
+}
+
+.heading-container h1::before {
+    content: "";
+    width: 25px;
+    margin-right: 24px;
+    background-image: url(./assets/images/icon-star.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/********** Styling the Accordion *****************/
+.faqs-container>div:not(:last-child) {
+    border-bottom: 1px solid var(--purple-100);
+}
+
+.faq details{
+    padding: 12px 0px;
+}
+
+.faq details > div{
+    color: var(--purple-600);
+    padding: 12px 0px;
+    margin-top: 0;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.faq details summary {
+    list-style: none;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.faq details summary::after{
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 50px;
+    background-image: url(./assets/images/icon-plus.svg);
+    background-position: right;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+}
+
+.faq details[aria-expanded = "true"] summary::after{
+    background-image: url(./assets/images/icon-minus.svg);
+    
+}
+
+@media (min-width:750px) {
+    main{
+        background-image: url(./assets/images/background-pattern-desktop.svg);
+        padding-top: 12vw;
+    }
+
+    .FAQs-section{
+        padding-top: 40px;
+    }
+
+    .FAQs-section h1 abbr{
+        font-size: 56px;
+    } 
+
+    .heading-container h1::before{
+        width: 36px;
+    }
+
+    .faq details > div{
+        font-size: 17px;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
